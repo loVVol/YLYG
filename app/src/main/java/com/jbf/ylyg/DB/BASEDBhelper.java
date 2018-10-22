@@ -10,7 +10,7 @@ import com.jbf.ylyg.SETTING.*;
 	public class BASEDBhelper extends SQLiteOpenHelper
 	{
 		private static final int VERSION=1;
-		private static String dbname=GameSetting.DBaddress;
+		private static String dbname=GameSetting.gDBaddress;
 		BASEDBhelper(Context context)
 		{
 			super(context, dbname, null, VERSION);
@@ -36,13 +36,13 @@ import com.jbf.ylyg.SETTING.*;
 				
 			//画图
 			//序号,上层序号,图画
-			String strSQL_user_item = "create table "
-				+ GameSetting.userdb_name.USER_ITEM
-				+ "(tid integer primary key autoincrement,username text,password varchar(40),start_init boolean)";
-
-			String strSQL_user_pat= "create table "
-				+ GameSetting.userdb_name.USER_PAT
-				+ "(tid integer primary key autoincrement,username text,password varchar(40),start_init boolean)";
+//			String strSQL_user_item = "create table "
+//				+ GameSetting.userdb_name.USER_ITEM
+//				+ "(tid integer primary key autoincrement,username text,password varchar(40),start_init boolean)";
+//
+//			String strSQL_user_pat= "create table "
+//				+ GameSetting.userdb_name.USER_PAT
+//				+ "(tid integer primary key autoincrement,username text,password varchar(40),start_init boolean)";
 
 			String strSQL_user_equit = "create table "
 				+ GameSetting.userdb_name.USER_EQUIPMENT
@@ -55,9 +55,9 @@ import com.jbf.ylyg.SETTING.*;
 				+ GameSetting.userdb_name.AUTO_SAVE
 				+ "(tid integer primary key autoincrement,ID integer)";
 			db.execSQL(strSQL_user);
-			db.execSQL(strSQL_user_pat);
-			db.execSQL(strSQL_user_equit);
-			db.execSQL(strSQL_user_item);
+//			db.execSQL(strSQL_user_pat);
+//			db.execSQL(strSQL_user_equit);
+//			db.execSQL(strSQL_user_item);
 			db.execSQL(strSQL_autosave);
 			// TODO: Implement this method
 		}

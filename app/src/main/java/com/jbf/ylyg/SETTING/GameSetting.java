@@ -4,12 +4,12 @@ import android.os.*;
 public class GameSetting
 {
 
-	public static final int MinLengthOfRegister=6;
-	public static final int MaxLengthOfRegister=20;
-	public static final int MinLengthOfPassword=6;
-	public static final int MaxlengthOfPassword=20;
-	public static final String DBaddress=Environment.getExternalStorageDirectory().getPath() + "/GAME_BASE.db";
-	public static final String USERDBaddress=Environment.getExternalStorageDirectory().getPath() + "/GAME_USER.db";
+	public static final int gMinLengthOfRegister=6;
+	public static final int gMaxLengthOfRegister=20;
+	public static final int gMinLengthOfPassword=6;
+	public static final int gMaxlengthOfPassword=20;
+	public static final String gDBaddress=Environment.getExternalStorageDirectory().getPath() + "/GAME_BASE.db";
+	public static final String gUSERDBaddress=Environment.getExternalStorageDirectory().getPath() + "/GAME_USER.db";
 
 	//用户数据库
 	public static class userdb_name
