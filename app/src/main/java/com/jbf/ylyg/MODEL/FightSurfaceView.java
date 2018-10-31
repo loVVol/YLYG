@@ -65,6 +65,7 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 		((Activity)getContext()).getWindowManager().getDefaultDisplay().getMetrics(dm);
 		mScreenWidth = dm.widthPixels;
 		mScreenHeight = dm.heightPixels;
+		
 
 		mPaint = new Paint();
 		mAutoPlayPath = new Path();

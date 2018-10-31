@@ -63,6 +63,7 @@ public class Player
 	}
 	public void setMove(double x,double y,double rotate)
 	{
+		
 		this.mRotate=(int)rotate;
 		this.mMapPoint.x+=x*mSpeed/30;
 		this.mMapPoint.y+=y*mSpeed/30;
