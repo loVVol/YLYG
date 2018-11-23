@@ -7,12 +7,16 @@ import java.util.*;
 import android.util.*;
 import android.app.*;
 import android.text.method.*;
+import android.widget.*;
+import com.jbf.ylyg.UI.*;
 
 public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callback,Runnable
 {
 
+	
+	
  	/**每30帧刷新一次屏幕**/
-	public static final int TIME_IN_FRAME = 30;
+	public static final int TIME_IN_FRAME = 60;
 	private long mAutoPlayCount=0;
 	private boolean mIsAutoPlay=true;
 	private int mScreenWidth=0;
@@ -50,7 +54,9 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 
 	public FightSurfaceView(Context context)
 	{
+		
 		super(context);
+		
 		initEverything();
 	}
 	protected void initEverything()
@@ -115,7 +121,11 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 	@Override
 	public void surfaceCreated(SurfaceHolder p1)
 	{
+		
+		
+		
 		mThread = new Thread(this);
+		
 		mThread.start();
 		// TODO: Implement this method
 	}
@@ -187,6 +197,12 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 						setLeftButtonDown(xf, yf);
 
 					}
+					if(Math.pow((xf - mLeftButtonPointCenter.x), 2)
+					   + Math.pow((yf - mLeftButtonPointCenter.y), 2)
+					   <= Math.pow((mLeftButtonSize * 2), 2))
+					   {
+						   
+					   }
 					break;
 
 				}
