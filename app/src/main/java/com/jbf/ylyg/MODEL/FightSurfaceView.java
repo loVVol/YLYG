@@ -47,6 +47,7 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 	private Player mPlayer;
 	Canvas mCanvas;
 	Canvas mplayerCanvas;
+	GameMap mGameMap;
 
 	public String testa=null;
 	public String testb=null;
@@ -113,7 +114,7 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 							  Path.Direction.CW);
 		mAutoPlayPath.addRect(x / 3, y / 100, x * 99 / 100, y * 99 / 100, Path.Direction.CW);
 		mNotAutoPlayPath.addRect(x / 100, y / 100, x * 99 / 100, y * 99 / 100 , Path.Direction.CW);
-		mPlayer = new Player();
+		mPlayer = new Player(mGameMap,true);
 
 
 	}
@@ -321,7 +322,7 @@ public class FightSurfaceView extends SurfaceView implements SurfaceHolder.Callb
 			double a= (mLeftButtonPointSmallCenter.x - mLeftButtonPointCenter.x) / mLeftButtonSize;
 			double b=(mLeftButtonPointSmallCenter.y - mLeftButtonPointCenter.y) / mLeftButtonSize;
 			double c=Math.atan(mLeftButtonPointSmallCenter.y / mLeftButtonPointSmallCenter.x);
-			mPlayer.setMove(a, b, c);
+			//mPlayer.setMove(a, b, c);
 			//testa = String.valueOf(xf);
 			//testb = String.valueOf(yf);
 			}

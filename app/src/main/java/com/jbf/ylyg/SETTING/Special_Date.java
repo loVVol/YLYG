@@ -1,3 +1,4 @@
+package com.jbf.ylyg.SETTING;
 public class Special_Date
 {
 private int AttUp;//增加普通攻击
